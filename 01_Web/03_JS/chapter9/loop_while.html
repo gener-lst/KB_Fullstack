@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function print(data) {
+            let i = 0;
+            while(i < data.length) {
+                alert((i + 1) + '번째 데이터: ' + data[i]);
+                i++
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let data = [10, 20, 30, 40, 50];
+        alert("배열의 길이: " +  data.length);
+        print(data);
+    </script>
+</body>
+</html>

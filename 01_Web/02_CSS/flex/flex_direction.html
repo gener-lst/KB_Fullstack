@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-container {
+        background-color: blue;
+        display: flex;
+        flex-direction: row;
+        /* row-reverse를 주면 float: right 처럼 쌓이게 됨 */
+        /* 보통 flex 속성은 수평 정렬을 위해서만 사용됨 */
+      }
+      .flex-item {
+        background-color: white;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+  </body>
+</html>

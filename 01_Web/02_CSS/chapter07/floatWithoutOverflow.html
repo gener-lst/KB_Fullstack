@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      div.container {
+        overflow: hidden;
+      }
+      /* float는 각 요소에 모두 적용해야 함 */
+      /* float를 사용 시, 부모 요소에 overflow를 hidden으로 지정하여 사용. 전체 영역을 차지한다. */
+      /* clear 속성으로 제거하기도 함, 이 경우 clear: both로 지정하여 양 옆 넘치는거 차단 ~> 위의 방법에 비해 새밀한 제어가 가능 */
+      div.item {
+        float: left;
+        margin: 0 3px;
+        padding: 10px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. In accusamus quo eaque enim modi voluptatum eligendi
+      sint repellat praesentium nisi quaerat, sunt repudiandae doloribus! Voluptatibus laudantium laboriosam a maxime.
+      Eaque!
+    </p>
+    <div class="container">
+      <div class="item">메뉴 1</div>
+      <div class="item">메뉴 2</div>
+      <div class="item">메뉴 3</div>
+      <div class="item">메뉴 4</div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione suscipit tempore in. Optio laudantium cupiditate
+      nemo recusandae inventore dolores deleniti rerum similique fugiat sed, veniam tempora magnam, velit aliquid?
+      Ducimus?
+    </p>
+  </body>
+</html>

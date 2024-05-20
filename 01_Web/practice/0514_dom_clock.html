@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <script>
+        window.onload = function () {
+            let clock = document.getElementById('clock');
+               
+            setInterval(function () {
+            // setInterval은 window 함수
+            // 함수를 따로 정의할지 익명함수를 쓸지는 함수의 재사용성에 달림
+                let now = new Date();
+                clock.innerHTML = now.toString();
+            }, 1000)
+        }
+    </script>
+</head>
+<body>
+    <h1 id="'clock"></h1>
+</body>
+</html>

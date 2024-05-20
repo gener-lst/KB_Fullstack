@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let h1 = document.querySelectorAll('h1');
+        // All은 선택자에 해당하는 요소를 모두 list 형태로 가져옴
+
+        for (i in h1) {
+          h1[i].style.color = 'orange';
+          h1[i].style.backgroundColor = 'red';
+          h1[i].innerHTML = 'From JavaScript';
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+  </body>
+</html>

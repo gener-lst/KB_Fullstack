@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let person = {
+                name: ''
+            };
+            
+            person.eat = function(food) {
+                alert(this.name + '이 ' + food + '을/를 먹습니다.');
+            }
+
+            person.setName = function(name) {
+                this.name = name;
+            }
+
+            person.setName('윤인성');
+
+            // 메서드를 호출합니다.
+            // 객체 안에 있는 함수를 메서드라고 한다.
+            // 객체의 속성을 사용할 때는 .을 붙이거나 [] 안에 키값을 넣는다.
+
+            person.eat('밥');
+        </script>
+    </body>
+</html>

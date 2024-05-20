@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let fruit = {
+            제품명: '7D 건조 망고',  
+            유형: '당절임',
+            성분: '망고, 설탕, 메타중아황산나트륨, 치자황색소',
+            원산지: '필리핀'
+        }
+    </script>
+</head>
+<body>
+    <script>
+        for(let i in fruit) {
+            alert(`${i}: ${fruit[i]}`);
+            // 백틱을 통해서 문자열 더하기 방식 이외에도 문자열 출력이 가능하다.
+        }
+    </script>
+</body>
+</html>

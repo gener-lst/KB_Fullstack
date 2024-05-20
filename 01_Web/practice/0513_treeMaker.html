@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tree(last) {
+            let i = 0;
+            while(i < last) {
+                for(let k = 0; k < last - i; k++) {
+                    document.write('&nbsp&nbsp');
+                }
+                for(let j = 0; j < 1 + (2 * i); j++) {
+                    document.write(' * ');
+                }
+                document.write('<br>');
+                i = i + 1;
+            }
+            for(let l = 0; l < 3; l++) {
+                for(let m = 0; m < last - 1; m++) {
+                    // 알고리즘 상으로는 조건식에 last - 2가 들어가야 되는데, 간격이 안 맞아서 임시로 -1로 넣었습니다. 그래도 살짝 어긋나있어요...
+                    document.write('&nbsp&nbsp');
+                }
+                for(let n = 0; n < 3; n++) {
+                    document.write(' * ');
+                }
+                document.write('<br>');
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let loop = true;
+        while(loop) {
+            let input = prompt('몇 단 트리를 만들까요?');
+            console.log(input);
+            if(input != null) {
+                tree(input);
+                alert(input + '단 트리 완성!')
+            } else {
+                break;
+            }
+            loop = confirm('추가 작업을 진행할까요?');
+        }
+        alert('작업을 종료합니다.')        
+    </script>
+</body>
+</html>

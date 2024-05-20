@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 우선순위: !important > 인라인선언 > id > class > 태그 > 전체(*) */
+      * {
+        color: blue /* !important */;
+      }
+      div {
+        color: red;
+      }
+      .color_green {
+        color: green;
+      }
+      #color_yellow {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="“color_yellow”" class="”color_green”" style="color: aqua">hello world!</div>
+  </body>
+</html>

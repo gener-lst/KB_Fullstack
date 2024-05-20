@@ -1,0 +1,23 @@
+<!-- 17. 원기둥 밑면의 반지름과 높이를 입력받아 부피를 계산하는 프로그램을 작성하시오.
+[Hint] 원기둥의 부피 = 밑면의 넓이 × 높이 = (반지름 × 반지름 × π) × 높이 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function calc(radius, height) {
+        volume = Math.round(radius * radius * Math.PI * height * 100) / 100;
+        return volume;
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      let radius = parseFloat(prompt('밑면의 반지름은?'));
+      let height = parseFloat(prompt('높이는?'));
+      alert(`원기둥의 부피는 ${calc(radius, height)}cm2 입니다.`);
+    </script>
+  </body>
+</html>

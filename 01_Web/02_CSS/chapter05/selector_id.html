@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ID 선택자</title>
+    <style>
+      #header {
+        width: 800px;
+        margin: 0 auto;
+        /* margin: 위아래 좌우 
+           auto는 중앙정렬 ~> 적용하기 위해서는 높이 또는 넓이의 값이 정해져야 하고 block 형식의 태그여야 함 */
+        background-color: red;
+      }
+      #wrap {
+        width: 800px;
+        margin: 0 auto;
+        /* overflow: hidden; */
+      }
+      #aside {
+        width: 200px;
+        /* width200으로 emit 가능 */
+        background-color: blue;
+        float: left;
+      }
+      #content {
+        width: 600px;
+        background-color: green;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header"><h1>#header 태그</h1></div>
+    <!-- div#header 입력시, 빠른 emit 적용 가능 -->
+    <div id="wrap">
+      <div id="aside"><h1>#aside 태그</h1></div>
+      <div id="content"><h1>#content 태그</h1></div>
+    </div>
+  </body>
+</html>

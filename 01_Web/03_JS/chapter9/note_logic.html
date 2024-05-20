@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function season() {
+            let date = new Date();
+            let month = date.getMonth + 1;
+            let season;
+            if(month < 3) {
+                season = "겨울";
+            } else if(month < 6) {
+                season = "봄";
+            } else if(month < 9) {
+                season = "여름";
+            } else if(month < 12) {
+                season = "가을";
+            } else {
+                season = "봄"
+            }
+            return season;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        let answer = season();
+        alert('현재 계절은 ' + answer + '입니다.')
+    </script>
+</body>
+</html>

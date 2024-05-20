@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet" />
+    <link
+      href="https://www.flaticon.com/kr/free-icons/"
+      title="확대경 아이콘"
+      rel="확대경 아이콘 제작자: Ayub Irawan - Flaticon"
+    />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+      #header {
+        left: 0;
+        right: 0;
+        height: 300px;
+      }
+      #wrap {
+        height: 1600px;
+      }
+      #footer {
+        height: 30px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .nav {
+        float: right;
+        width: 80%;
+        overflow: hidden;
+        height: 50px;
+        text-align: center;
+      }
+      .nav > ul {
+        float: right;
+      }
+      .nav > ul li {
+        float: left;
+        margin: auto 10px;
+      }
+      .nav > ul li.li_text:hover {
+        text-decoration: underline;
+      }
+      .main {
+        width: 50%;
+        height: 100px;
+        text-align: center;
+        left: 25%;
+        top: 30%;
+        position: absolute;
+      }
+      .main > * {
+        margin: 0;
+        padding: 0;
+      }
+      .Google {
+        display: inline-block;
+        font-size: 90px;
+        font-weight: 600;
+        font-family: 'Noto Sans', sans-serif;
+      }
+      #G {
+        color: blue;
+      }
+      #o1 {
+        color: red;
+      }
+      #o2 {
+        color: yellow;
+      }
+      #g {
+        color: blue;
+      }
+      #l {
+        color: green;
+      }
+      #e {
+        color: red;
+      }
+      #search_bar {
+        display: inline-block;
+        position: absolute;
+        left: 25%;
+        top: 55%;
+        border-radius: 20px;
+        width: /* 475px */ 50%;
+        height: 40px;
+        background-image: url(/data/image/glasses.png);
+        background-color: white;
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        background-position: 10px 10px;
+        padding: 12px 20px 12px 40px;
+      }
+      .icons {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        width: 400px;
+        margin-left: -200px;
+      }
+      #set_btn {
+        width: 150px;
+        height: 30px;
+        margin: 0 100px 100px 0;
+        border-radius: 20px;
+        background-color: aquamarine;
+        border: none;
+        float: right;
+        overflow: hidden;
+        box-shadow: 2px 2px 5px 2px #dadce0;
+      }
+      #set_btn:hover {
+        background-color: rgb(89, 95, 93);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="header">
+        <div class="nav">
+          <ul>
+            <li class="li_text">Gmail</li>
+            <li class="li_text">이미지</li>
+            <li><img src="#" alt="그림X" /></li>
+            <li><img src="#" alt="그림X" /></li>
+            <li><img src="#" alt="그림X" /></li>
+          </ul>
+        </div>
+      </div>
+      <div id="wrap">
+        <div class="main">
+          <div id="G" class="Google">G</div>
+          <div id="o1" class="Google">o</div>
+          <div id="o2" class="Google">o</div>
+          <div id="g" class="Google">g</div>
+          <div id="l" class="Google">l</div>
+          <div id="e" class="Google">e</div>
+        </div>
+        <div class="search_bar">
+          <input type="search" id="search_bar" name="search_bar" placeholder="   Google 검색 또는 URL 입력" />
+          <div><img src="/data/image/mic.png" alt="그림X" /></div>
+          <div><img src="/data/image/camera.png" alt="" /></div>
+        </div>
+        <div class="icons">
+          <table>
+            <tr>
+              <td><img src="#" alt="그림X" /></td>
+              <td><img src="#" alt="그림X" /></td>
+              <td><img src="#" alt="그림X" /></td>
+            </tr>
+            <tr>
+              <td><img src="#" alt="그림X" /></td>
+              <td><img src="#" alt="그림X" /></td>
+              <td><img src="#" alt="그림X" /></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="footer">
+        <input type="button" id="set_btn" name="set_btn" value="chrome 맞춤설정" />
+      </div>
+    </div>
+  </body>
+</html>

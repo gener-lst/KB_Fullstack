@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        transition: 1s ease-in-out 0.5s;
+        /* transition: width 0.5s, background-color 1s; */
+        /* ,로 구분하여 각각도 적용 가능 */
+        /* transition: 속성명 지속시간(필수!) 타이밍함수 대기시간 */
+        /*             기본(all)             기본값(ease) 기본값(0s)*/
+      }
+      div:hover {
+        width: 300px;
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

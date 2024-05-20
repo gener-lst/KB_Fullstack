@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        /* 따로 부모 요소를 relative로 지정해주지 않았을 경우엔 viewport 기준 */
+        position: absolute;
+        width: 100px;
+        height: 100px;
+      }
+      .box:first-child {
+        background-color: red;
+        z-index: 10;
+      }
+      .box:nth-child(2) {
+        background-color: green;
+        left: 50px;
+        top: 50px;
+        z-index: 20;
+      }
+      .box:nth-child(3) {
+        background-color: blue;
+        left: 100px;
+        top: 100px;
+        z-index: 30;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </body>
+</html>

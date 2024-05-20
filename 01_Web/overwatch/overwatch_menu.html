@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+    />
+    <!-- 스타일 리셋 코드 링크 (브라우저 별 기본 스타일(margin/padding 등)) -->
+    <style>
+      body {
+        background-image: url(/images/bg.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        padding-top: 100px;
+      }
+
+      div.select_row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      div.char_box {
+        box-sizing: border-box;
+        width: 100px;
+        height: 100px;
+        margin: 4px;
+        border: 4px solid white;
+        border-radius: 10px;
+        background-color: gray;
+        overflow: hidden;
+        transform: skewX(-15deg);
+        transition: transform 0.5s, background-color 1s;
+      }
+
+      div.hero {
+        transform: skew(15deg);
+      }
+
+      img.hero_image {
+        max-width: 100px;
+        max-height: 100px;
+      }
+      div.char_box:hover {
+        background-color: orange;
+        transform: skewX(-15deg) scale(1.3);
+        z-index: 1;
+      }
+
+      div.logo {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 40px 0 0;
+      }
+
+      .logo img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="select_menu">
+      <div id="first_row" class="select_row">
+        <div class="char_box">
+          <div id="ana" class="hero">
+            <img class="hero_image" src="/images/hero1.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="ashe" class="hero">
+            <img class="hero_image" src="/images/hero2.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="baptiste" class="hero">
+            <img class="hero_image" src="/images/hero3.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="bastion" class="hero">
+            <img class="hero_image" src="/images/hero4.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="brigitte" class="hero">
+            <img class="hero_image" src="/images/hero5.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="d.va" class="hero">
+            <img class="hero_image" src="/images/hero6.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="doomfist" class="hero">
+            <img class="hero_image" src="/images/hero7.png" alt="x" />
+          </div>
+        </div>
+      </div>
+      <div id="second_row" class="select_row">
+        <div class="char_box">
+          <div id="echo" class="hero">
+            <img class="hero_image" src="/images/hero8.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="genji" class="hero">
+            <img class="hero_image" src="/images/hero9.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="hanzo" class="hero">
+            <img class="hero_image" src="/images/hero10.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="junkrat" class="hero">
+            <img class="hero_image" src="/images/hero11.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="lucio" class="hero">
+            <img class="hero_image" src="/images/hero12.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="cassidy" class="hero">
+            <img class="hero_image" src="/images/hero13.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="mei" class="hero">
+            <img class="hero_image" src="/images/hero14.png" alt="x" />
+          </div>
+        </div>
+      </div>
+      <div id="third_row" class="select_row">
+        <div class="char_box">
+          <div id="mercy" class="hero">
+            <img class="hero_image" src="/images/hero15.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="Moira" class="hero">
+            <img class="hero_image" src="/images/hero16.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="orisa" class="hero">
+            <img class="hero_image" src="/images/hero17.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="pharah" class="hero">
+            <img class="hero_image" src="/images/hero18.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="reaper" class="hero">
+            <img class="hero_image" src="/images/hero19.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="reinhardt" class="hero">
+            <img class="hero_image" src="/images/hero20.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="roadhog" class="hero">
+            <img class="hero_image" src="/images/hero21.png" alt="x" />
+          </div>
+        </div>
+      </div>
+      <div id="fourth_row" class="select_row">
+        <div class="char_box">
+          <div id="sigma" class="hero">
+            <img class="hero_image" src="/images/hero22.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="soldier:76" class="hero">
+            <img class="hero_image" src="/images/hero23.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="sombra" class="hero">
+            <img class="hero_image" src="/images/hero24.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="symmetra" class="hero">
+            <img class="hero_image" src="/images/hero25.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="torbjorn" class="hero">
+            <img class="hero_image" src="/images/hero26.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="tracer" class="hero">
+            <img class="hero_image" src="/images/hero27.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="widowmaker" class="hero">
+            <img class="hero_image" src="/images/hero28.png" alt="x" />
+          </div>
+        </div>
+      </div>
+      <div id="fifth_row" class="select_row">
+        <div class="char_box">
+          <div id="winston" class="hero">
+            <img class="hero_image" src="/images/hero29.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="wrecking_ball" class="hero">
+            <img class="hero_image" src="/images/hero30.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="zarya" class="hero_image">
+            <img class="hero_image" src="/images/hero31.png" alt="x" />
+          </div>
+        </div>
+        <div class="char_box">
+          <div id="zenyatta" class="hero">
+            <img class="hero_image" src="/images/hero32.png" alt="x" />
+          </div>
+        </div>
+      </div>
+      <div class="logo">
+        <img src="/images/logo_overwatch.png" alt="x" />
+      </div>
+    </div>
+  </body>
+</html>

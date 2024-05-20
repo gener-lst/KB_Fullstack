@@ -1,0 +1,111 @@
+<!--html:5 / ! + tab -> 기본 html5 버전 틀 생성 단축-->
+
+<!DOCTYPE html>
+<!--html 버전-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 문자열 형식 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer>
+      function applyTargetBlank() {
+        var anchors = document.querySelectorAll('a');
+        anchors.forEach((item) => {
+          item.target = '_blank';
+        });
+      }
+      window.addEventListener('load', applyTargetBlank);
+    </script>
+    <title>HTML 연습</title>
+
+    <style>
+      h1 {
+        color: white;
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>제목</h1>
+    <a href="#naver">네이버는</a>
+    제목
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima distinctio nesciunt hic culpa architecto, nulla
+      natus commodi necessitatibus blanditiis molestiae eligendi quae officiis error, exercitationem facere ratione unde
+      repudiandae voluptate.
+    </p>
+
+    <hr />
+    <!--수평줄 생성-->
+    <br />
+    <!--줄바뀜-->
+    <p>Lorem ipsum dolor sit amet.</p>
+    <!--lorem5로 작성하면 5글자만 나옴-->
+    <a href="https://www.naver.com/">네이버 링크</a>
+    <h1 id="naver"><a href="https://www.naver.com/">네이버 링크</a></h1>
+    <!--이 경우 페이지에서 id의 속성값으로 지정된 위치로 이동하게 됨-->
+    <ul>
+      <li>선릉</li>
+      <ol>
+        <li>1번출구</li>
+        <li>2번출구</li>
+      </ol>
+      <li>화곡</li>
+      <li>발산</li>
+    </ul>
+    <table border="1">
+      <!--셀의 경계선에 선을 그림-->
+      <thead>
+        <!--첫번재 행을 헤드로 설정하고 싶을 경우 태그 사용 ~ 셀 사이에 공간 있음 셀스페이싱 메서드로 조정 가능-->
+        <tr>
+          <th colspan="5"></th>
+          <th>월</th>
+          <th>화</th>
+          <th>수</th>
+          <th>목</th>
+          <th>금</th>
+          <th>토</th>
+          <th>일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th colspan="5">1교시</th>
+          <th>수학</th>
+          <th>과학</th>
+          <th>체육</th>
+          <th>영어</th>
+          <th>국어</th>
+          <th>사회</th>
+          <th>한국사</th>
+        </tr>
+        <tr>
+          <th colspan="5">2교시</th>
+          <th>수학</th>
+          <th>과학</th>
+          <th>체육</th>
+          <th>영어</th>
+          <th>국어</th>
+          <th>사회</th>
+          <th>한국사</th>
+        </tr>
+      </tbody>
+      <!--tfoot도 지정 가능 ~ 각각의 구성은 생략 가능 ~ optional, 만약 생략 시 tbody가 생략된 것으로 간주하여 tbody 아래에 요소를 구성함-->
+    </table>
+    <img src="http://www.hanbit.co.kr/iamges/common/logo_habit.png" alt="그림이 존재하지 않습니다." width="300" />
+    <img src="/01_Web/data/image/Penguins.jpg" alt="팽귄" width="300" />
+    <!--위 표기는 상대경로, html 파일을 기준으로 같은 폴터에 있는 파일 호출-->
+    <!--절대경로의 경우, 나열된 경로를 제시해야 함(/로 디렉토리 구분)-->
+    <!--windows에서는 영어의 대소문자를 구별 x, 리눅스에서는 구분하기 때문에 소문자나 대문자 등 형식 통일 필요!-->
+    <audio src="/01_Web/data/audio/Kalimba.mp3" controls="controls" type="audio.mp3"></audio>
+    <!--controls 속성은 버튼 포멧, 설정 안 할지 아무것도 나오지 않음-->
+    <!--웹브라우저마다 src 타입에 따라 지원을 안 할 수도 있음-->
+    <!--src의 타입을 태그 내부에 명시하여 표기, 파일 확장자는 windows의 표기 방법이므로 표기해야 함/img, video 역시 마찬가지 -->
+    <video controls="controls" autoplay poster="http://via.placeholder.com/1280x720">
+      <source src="/01_Web/data/video/Wildlife.mp4" type="video.mp4" />
+    </video>
+    <!--비디오의 경우 파일이 크기 때문에 다운로드 시간이 걸릴 수 있음, 이 경우 사용자에게 동영상을 불러오는 동안 대체 이미지를 출력-->
+    <!--autoplay 속성 배정시, 해당 데이터가 준비가 되면 바로 재생함-->
+    <!--ctrl+space 시, 현재 위치에서 사용가능한 속성 표기-->
+  </body>
+</html>
