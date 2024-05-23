@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <select id="regions">
+        <option disabled="disalbled" selected>지역 선택</option>
+        <!-- 처음 보이는 기본값에 대해 선택할 수 없게 하도록 disabled를 줌 -->
+        <option v-for="(val, key) i n regions" :value="key" :key="key">
+          <!-- 객체의 키와 데이터값을 꺼내서 각각을 필요한 위치에 지정 -->
+          {{val}}
+        </option>
+      </select>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            regions: {
+              A: 'Asia',
+              B: 'America',
+              C: 'Europe',
+              D: 'Africa',
+              E: 'Oceania',
+            },
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

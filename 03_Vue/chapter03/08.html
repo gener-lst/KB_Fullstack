@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 입력받은 값을 name 값과 바인딩해주고 해당 값을 입력할 때 changeName 함수와 연결 -->
+      <input type="text" :value="name" @input="changeName" />
+      <!-- : 앞에 v-bind 생략, @는 이벤트 이름 -->
+      <br />
+      이름: <span>{{name}}</span>
+    </div>
+    <script src="http://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return { name: '' };
+        },
+        method: {
+          changeName(e) {
+            this.name = e.target.value;
+            // 이벤트의 타겟은 입력값을 받아오는 input 태그
+            // this.은 해당 scope에서 현재 객체를 찾지 못하면 상위 스코프로 올라가게 됨. 따라서, 여기서는 화살표 함수 x
+            // 보통 화살표 함수는 scope를 한 번 더 감싸는 callback 함수에 자주 사용됨
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

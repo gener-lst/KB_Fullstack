@@ -16,11 +16,14 @@
         message: 'Hello Vue3!',
       };
       let vm = Vue.createApp({
+        // createApp : vue에서 앱을 생성할 때 사용되는 메소드
+        // 설정 객체
         name: 'App',
+        // data는 proxy 객체
         data() {
           return model;
         },
-      }).mount('#app');
+      }).mount('#app'); // id가 app인 요소와 연결해줌
     </script>
   </body>
 </html>
