@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div><h2>Bootstrap Table</h2></div>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 50px">No</th>
+            <th>제목</th>
+            <th style="width: 150px">작성자</th>
+            <th style="width: 150px">등록일</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div></div>
+    <div></div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            contacts: [
+              { no: 1011, name: 'RM', tel: '010-3456-8299' },
+              { no: 1012, name: '정국', tel: '010-3456-8298' },
+              { no: 1013, name: '제이홉', tel: '010-3456-8297' },
+              { no: 1014, name: '슈가', tel: '010-3456-8296' },
+            ],
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

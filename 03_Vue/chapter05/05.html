@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- contexmenu는 우클릭시 나오는 툴 메뉴 기능 -->
+      <!-- 이를 e.preventDefault를 통해 막도록 구현 -->
+      <div
+        @contextmenu="ctxStop"
+        style="position: absolute; left: 5px; top: 5px; right: 5px; bottom: 5px"
+      >
+        <a href="http://facebook.com" @click="confirmFB">페이스북</a>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {};
+        },
+        methods: {
+          ctxStop(e) {
+            e.preventDefault();
+          },
+          confirmFB(e) {
+            // confirm 창에서 취소를 눌렀을 경우 링크 이동을 못하게 함
+            // confirm 함수는 확인 취소 입력에 따라 응답을 boolean으로 리턴함
+            if (!confirm('페이스북으로 이동할까요?')) {
+              e.preventDefault();
+            }
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
