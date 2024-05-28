@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planet</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="input">
+          <h1>문자열 변환 도구</h1>
+          <input
+            type="text"
+            placeholder="여기에 문자열을 입력하세요"
+            v-model="inputText"
+          /><button @click="toUpperCase">대문자로 변환</button>
+          <button @click="reverseText">문자열 뒤집기</button>
+        </div>
+        <div class="output">결과: {{result}}</div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      var vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            inputText: '',
+            result: '',
+          };
+        },
+        methods: {
+          toUpperCase() {
+            this.result = this.inputText.toUpperCase();
+          },
+          reverseText() {
+            let arr = [...this.inputText];
+            this.result = arr.reverse().join('');
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
