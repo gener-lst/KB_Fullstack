@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>당신이 경험한 프론트엔드 기술은? (첫번째: Slot 사용 x)</h3>
+    <h3>당신이 경험한 프론트엔드 기술은? (두번째:slot기본)</h3>
     <!-- items 배열을 순회하면서 자식의 props에 해당 값들을 넘겨준다 -->
     <!-- 자식에서 보낸 check-changed 이벤트에 CheckBoxChanged 함수 연결 -->
     <CheckBox2

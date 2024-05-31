@@ -8,7 +8,13 @@
       @change="$emit('check-changed', { id, checked: $event.target.checked })"
     />
     <!-- 체크박스가 체크됐을 경우 span 태그 랜더링 // i태그는 보여질 경우 이텔릭체로 label 출력 -->
-    <slot>Item</slot>
+    <span
+      v-if="checked === true"
+      style="color: blue; text-decoration: underline"
+    >
+      <i>{{ label }}</i></span
+    >
+    <span v-else style="color: gray">{{ label }}</span>
   </div>
 </template>
 

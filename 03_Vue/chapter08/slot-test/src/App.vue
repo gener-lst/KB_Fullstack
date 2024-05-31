@@ -1,14 +1,15 @@
 <template>
   <div>
-    <!-- <NoSlotTest /> -->
+    <NoSlotTest />
     <SlotTest />
   </div>
 </template>
 <script>
-// import NoSlotTest from './components/SlotTest.vue';
+import NoSlotTest from './components/NoSlotTest.vue';
 import SlotTest from './components/SlotTest.vue';
+
 export default {
   name: 'App',
-  components: { SlotTest },
+  components: { NoSlotTest, SlotTest },
 };
 </script>

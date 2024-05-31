@@ -15,6 +15,7 @@ export default {
   component: { InputName },
   data() {
     return { searchName: 'John' };
+    ````;
   },
   // methods: {
   //   // v-model로 양방향 바인딩시 생략가능
