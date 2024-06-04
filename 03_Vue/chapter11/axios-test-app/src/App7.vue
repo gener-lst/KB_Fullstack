@@ -14,6 +14,7 @@ const requestAPI = async () => {
     .then((response) => {
       console.log('# 응답객체 : ', response);
     })
+    // 에러 나는게 정상
     .catch((e) => {
       console.log('에러======================');
       console.log(e);

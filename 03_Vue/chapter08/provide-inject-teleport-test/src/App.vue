@@ -23,6 +23,8 @@ export default {
     };
   },
 
+  // provide로 하위 컴포넌트에 속성이나 함수를 전달할 수 있음
+  // 부모 컴포넌트에서 제공해야함
   provide() {
     return {
       icons: {
@@ -30,6 +32,7 @@ export default {
         unchecked: 'far fa-circle',
       },
       doneCount: computed(() => {
+        // filter : 현재 노래 목록에서 done이 true인 항목을 리스트로 반환
         return this.songs.filter((s) => s.done === true).length;
       }),
     };
