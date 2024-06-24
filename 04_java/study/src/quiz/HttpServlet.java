@@ -1,0 +1,7 @@
+package quiz;
+
+public abstract class HttpServlet {
+    public abstract void service();
+
+
+}
