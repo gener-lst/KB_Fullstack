@@ -1,0 +1,32 @@
+package CLI_Framework.V5.ui;
+
+import CLI_Framework.V2.Input;
+import CLI_Framework.V3.command.Command;
+
+public class Menu {
+    MenuItem[] menus;
+
+    public Menu(int size) {
+        menus = new MenuItem[size];
+    }
+
+    public void add(int ix, MenuItem item) {
+        menus[ix] = item;
+    }
+
+    public void printMenu() {
+        System.out.println("----------------------------------");
+        for (int i = 0; i < menus.length; i++) {
+            System.out.printf("%d.%s | ", i+1, menus[i].getTitle());
+        }
+        System.out.println();
+        System.out.println("----------------------------------");
+    }
+
+    public Command getSelect() {
+        int selectNo = Input.getInt("선택> ");
+        // 올바른 범위 인지 체크
+
+        return menus[selectNo-1].getCommand();
+    }
+}
