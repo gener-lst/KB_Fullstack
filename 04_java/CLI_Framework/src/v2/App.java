@@ -70,4 +70,9 @@ public class App {
             executeCommand(selectNo);
         }
     }
+
+    public static void main(String[] args) {
+        v1.App app = new v1.App();
+        app.run();
+    }
 }

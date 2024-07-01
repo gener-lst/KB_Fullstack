@@ -17,6 +17,6 @@ public class GameObject {
     }
 
     public void displayPosition() {
-        System.out.printf("현재 위치: (%d, %d)", this.x, this.y);
+        System.out.printf("%", this.x, this.y);
     }
 }

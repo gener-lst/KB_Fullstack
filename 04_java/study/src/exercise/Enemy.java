@@ -9,6 +9,6 @@ public class Enemy extends GameObject {
     }
 
     public void attack() {
-
+        System.out.println();
     }
 }

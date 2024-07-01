@@ -9,6 +9,6 @@ public class Item extends GameObject {
     }
 
     public void use() {
-
+        System.out.printf("%s is used. It is a %s.", name, type);
     }
 }
