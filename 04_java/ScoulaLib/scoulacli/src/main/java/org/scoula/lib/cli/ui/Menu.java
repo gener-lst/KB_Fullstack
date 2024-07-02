@@ -1,6 +1,7 @@
 package org.scoula.lib.cli.ui;
 
 import org.scoula.lib.cli.command.Command;
+import org.scoula.lib.cli.exception.BadMenuException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,10 +26,13 @@ public class Menu {
         System.out.println("----------------------------------");
     }
 
-    public Command getSelect() {
-        int selectNo = Input.getInt("선택> ");
-        // 올바른 범위 인지 체크
+    public Command getSelect() throws Exception {
+        try {
+            int selectNo = Input.getInt("선택> ");
+            return menus.get(selectNo-1).getCommand();
+        } catch (Exception e) {
+            throw new BadMenuException();
+        }
 
-        return menus.get(selectNo-1).getCommand();
     }
 }
