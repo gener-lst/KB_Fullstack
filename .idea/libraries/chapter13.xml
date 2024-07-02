@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="chapter13">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/03_Vue/chapter13/pinia-test-app.zip!/" />
+      <root url="jar://$PROJECT_DIR$/03_Vue/chapter13/todolist-app-pinia.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

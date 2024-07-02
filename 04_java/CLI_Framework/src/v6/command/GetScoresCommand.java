@@ -1,6 +1,6 @@
 package v6.command;
 
-import v6.Input;
+import v6.ui.Input;
 import v6.domain.StudentScores;
 
 public class GetScoresCommand implements Command {
