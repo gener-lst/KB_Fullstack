@@ -1,7 +1,7 @@
 package v3.command;
 
 import v3.domain.StudentScores;
-import v2.Input;
+import v3.Input;
 
 public class GetScoresCommand implements Command {
     StudentScores studentScores = StudentScores.getInstance();
