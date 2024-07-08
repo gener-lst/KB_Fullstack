@@ -1,4 +1,4 @@
-package ch18.exam01;
+package ch18.sec01;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

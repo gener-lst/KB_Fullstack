@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2056cead-1341-4350-9176-62c9ac65670a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/study/src/ch15/sec03/exam3/HashSetExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study/src/ch15/sec04/exam1/HashMapExample.java" afterDir="false" />
-    </list>
+    <list default="true" id="2056cead-1341-4350-9176-62c9ac65670a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +22,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/KB_Fullstack/04_java",
+    "last_opened_file_path": "C:/KB_Fullstack/04_java/study",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -48,6 +45,7 @@
       <updated>1719810281994</updated>
       <workItem from="1719810283111" duration="13000" />
       <workItem from="1719897576125" duration="18000" />
+      <workItem from="1720408365787" duration="12000" />
     </task>
     <servers />
   </component>
