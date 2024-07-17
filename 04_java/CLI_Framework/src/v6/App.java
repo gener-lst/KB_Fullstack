@@ -21,6 +21,7 @@ public abstract class App {
     }
 
     public void run() {
+        // ArrayList로 변하면서 크기를 정해질 필요가 없어짐
         init();
         while (true) {
             menu.printMenu();
