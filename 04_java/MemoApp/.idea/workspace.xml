@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="94276b73-6ffd-428a-b9d9-8c3886186bba" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../StudentStore/.idea/artifacts/StudentScore_ScoulaCli_main_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/src/main/java/org/scoula/todo/dto/Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/src/main/java/org/scoula/todo/dto/PageRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodoSpring/src/main/java/org/scoula/todo/config/ProjectConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodoSpring/src/main/java/org/scoula/travel/dao/TravelDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodoSpring/src/main/java/org/scoula/travel/dao/TravelDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodoSpring/src/main/java/org/scoula/travel/domain/TravelVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodoSpring/src/test/java/org/scoula/travel/dao/TravelDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodoSpring/travel.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../08_Spring/MemoApp/lib/scoulacli.main.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../08_Spring/MemoApp/src/main/java/org/scoula/memo/MemoApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/scoula/MemoApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ScoulaLib/scoulacli/build/libs/ScoulaCli-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../ScoulaLib/scoulacli/build/libs/ScoulaCli-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentStore/.gradle/7.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentStore/.gradle/7.4/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentStore/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentStore/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentStore/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentStore/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentStore/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentStore/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentStore/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentStore/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentStore/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentStore/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentStore/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentStore/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentStore/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentStore/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentStore/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentStore/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentStore/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentStore/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/src/main/java/org/scoula/todo/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/src/main/java/org/scoula/todo/Context.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/src/main/java/org/scoula/todo/TodoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/src/main/java/org/scoula/todo/TodoApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/src/main/java/org/scoula/todo/dao/TodoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/src/main/java/org/scoula/todo/dao/TodoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/src/main/java/org/scoula/todo/dao/TodoDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/src/main/java/org/scoula/todo/dao/TodoDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/src/main/java/org/scoula/todo/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/src/main/java/org/scoula/todo/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/src/main/java/org/scoula/todo/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../05_MySQL/ScoulaTodo/src/main/java/org/scoula/todo/service/TodoService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2ilTENXCwh7qwr5n8ncbo9OXnoN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/KB_Fullstack/04_java/MemoApp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94276b73-6ffd-428a-b9d9-8c3886186bba" name="Changes" comment="" />
+      <created>1720064052363</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720064052363</updated>
+      <workItem from="1720064054042" duration="149000" />
+      <workItem from="1720069343966" duration="999000" />
+      <workItem from="1721280055995" duration="1180000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

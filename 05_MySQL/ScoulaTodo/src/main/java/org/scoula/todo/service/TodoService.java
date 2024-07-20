@@ -5,10 +5,13 @@ import org.scoula.todo.Context;
 import org.scoula.todo.dao.TodoDao;
 import org.scoula.todo.dao.TodoDaoImpl;
 import org.scoula.todo.domain.TodoVO;
+import org.scoula.todo.dto.Page;
+import org.scoula.todo.dto.PageRequest;
 
 import java.sql.SQLException;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 import java.util.function.Supplier;
 
 public class TodoService {
@@ -110,6 +113,43 @@ public class TodoService {
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
+        }
+    }
+
+    private Page getPage(int pageNum) throws SQLException {
+        int count = dao.getTotalCount(userId.get());
+        PageRequest request = PageRequest.of(pageNum, 10);
+
+        List<TodoVO> list = dao.getPage(userId.get(), request);
+
+        return Page.of(request, count, list);
+    }
+
+    private void printPageData(Page page, int pageNum) {
+        System.out.println("총 건수: " + page.getTotalCount());
+        System.out.println("======================================");
+        for(TodoVO todo : page.getList()) {
+            System.out.printf("%03d] %s%s\n", todo.getId(), todo.getTitle(),
+                    todo.getDone() ? "(완료)" : "");
+        }
+        System.out.println("======================================");
+        System.out.printf("페이지(%d%d): ", pageNum, page.getTotalPage());
+        for(int i = 1; i <= page.getTotalPage(); i++) {
+            System.out.printf("%s ", i == pageNum ? "[" + i + "]" : "" + i);
+        }
+        System.out.println();
+    }
+
+    public void printPage() {
+        int pageNum = 1;
+        try {
+            do {
+                Page page = getPage(pageNum);
+                printPageData(page, pageNum);
+                pageNum = Input.getInt("페이지 번회 ");
+            } while(pageNum != -1);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 }

@@ -1,8 +1,8 @@
 package org.scoula.todo.dao;
 
-import com.mysql.cj.protocol.x.ReusableOutputStream;
 import org.scoula.todo.common.JDBCUtil;
 import org.scoula.todo.domain.TodoVO;
+import org.scoula.todo.dto.PageRequest;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -117,6 +117,21 @@ public class TodoDaoImpl implements TodoDao {
             stmt.setString(1, userId);
             stmt.setLong(2, id);
             return stmt.executeUpdate();
+        }
+    }
+
+    @Override
+    public List<TodoVO> getPage(String userId, PageRequest request) throws SQLException {
+        String sql = "select * from todo where userId = ? limit ?, ?";
+
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, userId);
+            stmt.setInt(2, request.getOffset());
+            stmt.setInt(3, request.getSize());
+
+            try(ResultSet rs = stmt.executeQuery()) {
+                return mapList(rs);
+            }
         }
     }
 }

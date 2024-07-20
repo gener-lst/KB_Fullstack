@@ -15,9 +15,10 @@ public class TodoApp extends App {
     Menu userMenu;
     Menu anonymousMenu;
 
-    LoginService loginService = new LoginService();
-    AccountService accountService = new AccountService();
-    TodoService todoService = new TodoService();
+    // getBean을 몇 번을 하던 동일한 instance를 뽑아오게 됨 -> singleton 객체와 동일한 효과를 내고 있음
+    LoginService loginService = Context.getBean(LoginService.class);
+    AccountService accountService = Context.getBean(AccountService.class);
+    TodoService todoService = Context.getBean(TodoService.class);
 
     @Override
     public void init() {
@@ -27,7 +28,7 @@ public class TodoApp extends App {
         anonymousMenu.add(new MenuItem("종료", this::exit));
 
         userMenu = new Menu();
-        userMenu.add(new MenuItem("목록", todoService::print));
+        userMenu.add(new MenuItem("목록", todoService::printPage));
         userMenu.add(new MenuItem("검색", todoService::search));
         userMenu.add(new MenuItem("상세", todoService::detail));
         userMenu.add(new MenuItem("추가", todoService::create));
