@@ -1,7 +1,7 @@
 package org.scoula.todo.service;
 
 import org.scoula.lib.cli.ui.Input;
-import org.scoula.todo.Context;
+import org.scoula.todo.context.Context;
 import org.scoula.todo.dao.TodoDao;
 import org.scoula.todo.dao.TodoDaoImpl;
 import org.scoula.todo.domain.TodoVO;
@@ -11,7 +11,6 @@ import org.scoula.todo.dto.PageRequest;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 import java.util.function.Supplier;
 
 public class TodoService {

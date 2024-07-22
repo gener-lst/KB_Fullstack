@@ -22,7 +22,7 @@ public class Todo implements Cloneable { // 복제(clone)을 허용하는 인터
 
     @Builder
     public Todo(String title, String description, boolean done, Date date) {
-        this(gid, title, description, done, new Date());
+        this(gid++, title, description, done, new Date());
     }
 
     @Override

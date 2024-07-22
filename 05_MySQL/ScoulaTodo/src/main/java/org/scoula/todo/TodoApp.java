@@ -4,6 +4,7 @@ import org.scoula.lib.cli.App;
 import org.scoula.lib.cli.ui.Input;
 import org.scoula.lib.cli.ui.Menu;
 import org.scoula.lib.cli.ui.MenuItem;
+import org.scoula.todo.context.Context;
 import org.scoula.todo.exception.LoginFailException;
 import org.scoula.todo.service.AccountService;
 import org.scoula.todo.service.LoginService;

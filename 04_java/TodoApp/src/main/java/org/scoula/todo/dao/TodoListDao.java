@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TodoListDao implements TodoDao {
-    private static TodoDao instance = new TodoListDao();
+    private static TodoListDao instance = new TodoListDao();
 
     public static TodoDao getInstance() {
         return instance;

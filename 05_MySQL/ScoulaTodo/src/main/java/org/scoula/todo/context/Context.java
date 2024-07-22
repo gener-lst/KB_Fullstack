@@ -1,11 +1,9 @@
-package org.scoula.todo;
+package org.scoula.todo.context;
 
 import lombok.Getter;
 import lombok.Setter;
 import org.scoula.todo.dao.TodoDao;
-import org.scoula.todo.dao.TodoDaoImpl;
 import org.scoula.todo.dao.UserDaoImpl;
-import org.scoula.todo.domain.TodoVO;
 import org.scoula.todo.domain.UserVO;
 import org.scoula.todo.service.AccountService;
 import org.scoula.todo.service.LoginService;
@@ -22,6 +20,7 @@ public class Context {
 
     private Context() {
         map = new HashMap<>();
+
         map.put(UserVO.class, new UserDaoImpl());
         map.put(TodoDao.class, new UserDaoImpl());
         map.put(AccountService.class, new AccountService());

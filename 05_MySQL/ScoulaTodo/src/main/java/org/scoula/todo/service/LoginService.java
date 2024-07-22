@@ -1,13 +1,12 @@
 package org.scoula.todo.service;
 
 import org.scoula.lib.cli.ui.Input;
-import org.scoula.todo.Context;
+import org.scoula.todo.context.Context;
 import org.scoula.todo.dao.UserDao;
 import org.scoula.todo.dao.UserDaoImpl;
 import org.scoula.todo.domain.UserVO;
 import org.scoula.todo.exception.LoginFailException;
 
-import javax.security.auth.login.LoginException;
 import java.sql.SQLException;
 
 public class LoginService {

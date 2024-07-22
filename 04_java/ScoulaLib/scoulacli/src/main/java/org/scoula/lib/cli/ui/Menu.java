@@ -18,12 +18,12 @@ public class Menu {
     }
 
     public void printMenu() {
-        System.out.println("----------------------------------");
+        System.out.println("------------------------------------------------");
         for (int i = 0; i < menus.size(); i++) {
             System.out.printf("%d.%s | ", i+1, menus.get(i).getTitle());
         }
         System.out.println();
-        System.out.println("----------------------------------");
+        System.out.println("------------------------------------------------");
     }
 
     public Command getSelect() throws Exception {

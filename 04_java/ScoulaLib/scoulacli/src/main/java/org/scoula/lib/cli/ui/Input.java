@@ -6,15 +6,17 @@ public class Input {
     static Scanner scanner = new Scanner(System.in);
 
     public static int getInt(String title) {
-        System.out.println(title);
+        System.out.print(title);
         return Integer.parseInt(scanner.nextLine());
     }
 
+    // 사용자한테 입력받을때 출력할 문구를 title로 받아옴
     public static String getLine(String title) {
-        System.out.println(title);
+        System.out.print(title);
         return scanner.nextLine();
     }
 
+    // 사용자한테 String을 입력받을 용도의 메소드
     public static String getLine(String title, String defaultValue) {
 //      이름(김길동);
         System.out.printf("%s(%s): ", title, defaultValue);
