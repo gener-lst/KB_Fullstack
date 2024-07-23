@@ -14,7 +14,7 @@ import java.util.Optional;
 // UserDao 인터페이스를 구현하여 사용자 정보에 대한 실제 CRUD 작업 수행
 public class UserDaoImpl implements UserDao {
     // JDBC 연결 객체를 생성해서 초기화
-    Connection conn = JDBCUtil.getConnection();
+       Connection conn = JDBCUtil.getConnection();
 
     // USERS 테이블 관련 SQL 명령어
     private String USER_LIST = "SELECT * FROM users";

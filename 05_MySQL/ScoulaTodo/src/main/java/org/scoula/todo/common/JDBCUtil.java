@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class JDBCUtil {
     static Connection conn = null;
-//    정적 초기화 블록을 사용해서 JDBC 드라이버를 로드하고 데이터베이스 연결 설정
+    // 정적 초기화 블록을 사용해서 JDBC 드라이버를 로드하고 데이터베이스 연결 설정
     static {
         try {
             // Properties 객체를 생성하고 application.properties 파일 로드
