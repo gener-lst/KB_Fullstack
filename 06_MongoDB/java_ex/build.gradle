@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.scoula'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.mongodb:mongodb-driver-sync:5.0.0'
+
+    compileOnly("org.projectlombok:lombok:1.18.32")
+    annotationProcessor("org.projectlombok:lombok:1.18.32")
+    testCompileOnly("org.projectlombok:lombok:1.18.32")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.32")
+
+    // logback 드라이버는 warn이나 error 메세지 이외에도 이전 레벨의 메세지를 출력 가능하도록 설정할 수 있다(?)
+    // 레벨에는 (warn, error, debug, log 등) 존재
+    implementation 'ch.qos.logback:logback-classic:1.2.11'
+    implementation 'org.mongodb:mongodb-driver-sync:5.0.0'
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}

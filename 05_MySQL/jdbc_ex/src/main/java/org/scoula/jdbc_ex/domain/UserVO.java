@@ -12,4 +12,13 @@ public class UserVO {
     private String password;
     private String name;
     private String role;
+
+    public UserVO(String id, String password, String name, String role) {
+        this.id = id;
+        this.password = password;
+        this.name = name;
+        this.role = role;
+    }
+
+
 }
