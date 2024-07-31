@@ -10,8 +10,6 @@ import java.io.PrintWriter;
 public class SportsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
-
         String[] sports = request.getParameterValues("sports");
         String sex = request.getParameter("sex");
 
@@ -28,7 +26,6 @@ public class SportsServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
         doGet(request, response);
     }
 }
