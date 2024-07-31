@@ -14,7 +14,7 @@
 <h1>
     getParameter 실습
 </h1>
-<form action="login" method="post">
+<form action="login" method="get">
 <%--    login만 명시한 것은 서블릿과 연결해주겠다는 의미--%>
     <fieldset>
         <legend>로그인 폼</legend>
