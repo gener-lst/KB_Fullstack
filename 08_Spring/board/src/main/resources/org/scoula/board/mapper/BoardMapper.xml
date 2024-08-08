@@ -2,8 +2,10 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- MyBatis 매퍼 설정 파일 -->
 <mapper namespace="org.scoula.board.mapper.BoardMapper">
     <select id="getList" resultType="BoardVO">
+<!--        < 와 같은 기호가 들어갔을 경우 비교식이란걸 알려주기 위해 CDATA 명시 -->
 <![CDATA[
         select *
         from tbl_board
@@ -12,6 +14,7 @@
     </select>
 
     <select id="get" resultType="BoardVO">
+<!-- #{} 부분에는 매번 넣어주는 변수가 들어간다 -->
         select *
         from tbl_board
         where no = #{no}
@@ -25,4 +28,18 @@
             SELECT LAST_INSERT_ID()
         </selectKey>
     </insert>
+
+<!--    tbl_board의 no가 일치하는 행에서 title, content, writer 컬럼을 우리가 넣어준 값으로 수정 -->
+    <update id="update">
+        update tbl_board
+        set title       = #{title},
+            content     = #{content},
+            writer      = #{writer},
+            update_date = now()
+        where no = #{no}
+    </update>
+
+    <delete id="delete">
+        delete from tbl_board where no = #{no}
+    </delete>
 </mapper>

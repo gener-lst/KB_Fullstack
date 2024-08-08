@@ -20,8 +20,9 @@ public class BoardMapperTest {
     private BoardMapper mapper;
 
     @Test
-    @DisplayName("BoardMapper 의 목록 불러오기")
+    @DisplayName("BoardMapper의 목록 불러오기")
     public void getList() {
+        // 모든 BoardVO 리스트를 가져와서 각 객체를 출력한다
         for (BoardVO board : mapper.getList()) {
             log.info(board);
         }
@@ -48,4 +49,21 @@ public class BoardMapperTest {
         log.info(board);
     }
 
+    @Test
+    @DisplayName("BoardMapper의 글 수정")
+    public void update() {
+        BoardVO board = new BoardVO();
+        board.setNo(5L);
+        board.setTitle("수정된 제목");
+        board.setContent("수정된 내용");
+        board.setWriter("user00");
+        int count = mapper.update(board);
+        log.info("UPDATE COUNT: " + count);
+    }
+
+    @Test
+    @DisplayName("BoardMapper의 글 삭제")
+    public void delete() {
+        log.info("DELETE COUNT: " + mapper.delete(3L));
+    }
 }

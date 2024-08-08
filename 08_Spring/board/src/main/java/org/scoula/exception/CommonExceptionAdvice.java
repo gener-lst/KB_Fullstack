@@ -1,4 +1,4 @@
-package org.scoula.ex04.exception;
+package org.scoula.exception;
 
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;
@@ -20,7 +20,7 @@ public class CommonExceptionAdvice {
         return "error_page"; // 뷰 이름 반환
     }
 
-//    NoHandlerFoundException 예외를 처리해주겠다
+//    NoHandlerFoundException 예외를 처리해주겠다ㅇㅅ
     @ExceptionHandler(NoHandlerFoundException.class)
 //    HTTP 상태 코드를 404로 설정하겠다
     @ResponseStatus(HttpStatus.NOT_FOUND)
