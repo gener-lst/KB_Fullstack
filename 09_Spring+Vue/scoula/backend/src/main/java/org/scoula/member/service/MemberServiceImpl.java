@@ -4,6 +4,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.scoula.member.dto.MemberDTO;
 import org.scoula.member.dto.MemberJoinDTO;
+import org.scoula.member.dto.MemberUpdateDTO;
+import org.scoula.member.exception.PasswordMissmatchException;
 import org.scoula.member.mapper.MemberMapper;
 import org.scoula.security.account.domain.AuthVO;
 import org.scoula.security.account.domain.MemberVO;
@@ -40,10 +42,10 @@ public class MemberServiceImpl implements MemberService{
 
     private void saveAvatar(MultipartFile avatar, String username) {
     // 아바타 업로드
-        if(avatar != null && !avatar.isEmpty()) {
+        if(avatar != null && !avatar.isEmpty()) { // avatar가 존재하는 경우에만
             File dest = new File("c:/upload/avatar", username + ".png");
             try {
-                avatar.transferTo(dest);
+                avatar.transferTo(dest); // 해당 경로에 파일 저장
             } catch (IOException e) {
                 throw new RuntimeException(e); // advice에서 일괄 처리
             }
@@ -67,5 +69,19 @@ public class MemberServiceImpl implements MemberService{
         saveAvatar(dto.getAvatar(), member.getUsername());
 
         return get(member.getUsername()); // 저장된 회원 정보 반환
+    }
+
+    @Override
+    public MemberDTO update(MemberUpdateDTO member) {
+        MemberVO vo = mapper.get(member.getUsername()); // 사용자 이름을 테이블에서 조회하여 MemberVO 객체에 저장
+        if(!passwordEncoder.matches(member.getPassword(), vo.getPassword())) { // 비밀번호 일치 확인(암호화된 비밀번호 비교를 위해 matches() 사용)
+            throw new PasswordMissmatchException(); // 비밀번호 불일치 시 예외 발생
+        }
+        // 업데이트할 정보를 DB에 반영
+        mapper.update(member.toVO());
+        // 새로운 아바타 저장
+        saveAvatar(member.getAvatar(), member.getUsername());
+        // 업데이트된 회원 정보 반환
+        return get(member.getUsername());
     }
 }

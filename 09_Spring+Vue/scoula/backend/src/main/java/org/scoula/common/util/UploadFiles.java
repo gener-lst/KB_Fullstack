@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URLEncoder;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.DecimalFormat;
 
@@ -45,7 +46,7 @@ public class UploadFiles {
                 + " " + units[digitGroups];
     }
 
-    // 파일의 다운로드를 처리해주는 메소드
+    // 파일의 다운로드를 처리해주는 메소드 (저장용)
     public static void download(HttpServletResponse response, File file, String orgName) throws IOException {
         // response의 contentType을 다운로드 파일로 설정
         response.setContentType("application/download");
@@ -58,7 +59,7 @@ public class UploadFiles {
         // 따로 함수가 없는 경우에는 setHeader 함수에 정보를 설정해줘야 한다.
         response.setHeader("Content-Disposition", "attachment; filename=\"" + filename + "\"");
 
-//        response의 형태를 알수 없기 때문에 OutputStream 사용
+        // response의 형태를 알수 없기 때문에 OutputStream 사용
         try(OutputStream os = response.getOutputStream();
             BufferedOutputStream bos = new BufferedOutputStream(os)) {
             // 원본 파일을 스트림으로 전송(복사)
@@ -66,4 +67,21 @@ public class UploadFiles {
         }
     }
 
+    // 이미지를 다운로드하는 메소드(출력용)
+    public static void downloadImage(HttpServletResponse response, File file) {
+        try {
+            Path path = Path.of(file.getPath());
+            String mimeType = Files.probeContentType(path); // 파일의 MIME 타입 추출
+            response.setContentType(mimeType); // response의 타입 설정
+            response.setContentLength((int) file.length()); // response의 길이 설정
+
+            // 파일을 클라이언트로 전송하기 위해 출력 스트림 사용
+            try (OutputStream os = response.getOutputStream();
+                 BufferedOutputStream bos = new BufferedOutputStream(os)) {
+                Files.copy(path, bos);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
