@@ -40,8 +40,27 @@ public class BoardServiceImpl implements BoardService{
 
         BoardDTO board = BoardDTO.of(mapper.get(no));
 //        board 객체가 null이면 NoSuchElementException 예외 발생, null이 아니면 해당 객체 반환
+        log.info("========================" + board);
         return Optional.ofNullable(board)
                 .orElseThrow(NoSuchElementException::new);
+    }
+
+    //    해당 게시물에 참조 파일들을 추가해주는 메소드
+    private void upload(Long bno, List<MultipartFile> files) {
+        for(MultipartFile part: files) {
+//            첨부파일 목록에서 파일을 하나씩 꺼내서 비어있는지 확인
+//            비어있으면 다음 파일 확인
+            if(part.isEmpty()) continue;
+            try {
+//                업로드 경로 생성 후 BoardAttachmentVO 객체 생성
+                String uploadPath = UploadFiles.upload(BASE_DIR, part);
+                BoardAttachmentVO attach = BoardAttachmentVO.of(part, bno, uploadPath);
+//                BoardAttachment 테이블에 참조파일 데이터 하나 추가
+                mapper.createAttachment(attach);
+            } catch (IOException e) {
+                throw new RuntimeException(e);  // @Transactional에서 감지, 자동 rollback
+            }
+        }
     }
 
     // 2개 이상의 insert 문이 실행될 수 있으므로 트랜잭션 처리 필요
@@ -60,47 +79,25 @@ public class BoardServiceImpl implements BoardService{
         if(files != null && !files.isEmpty()) { // 첨부 파일이 있는 경우
             upload(vo.getNo(), files);
         }
-
 //        VO의 no에 해당하는 DTO 찾아오기
         return get(vo.getNo());
-    }
-
-//    해당 게시물에 참조 파일들을 추가해주는 메소드
-    private void upload(Long bno, List<MultipartFile> files) {
-        for(MultipartFile part: files) {
-//            첨부파일 목록에서 파일을 하나씩 꺼내서 비어있는지 확인
-//            비어있으면 다음 파일 확인
-            if(part.isEmpty()) continue;
-            try {
-//                업로드 경로 생성 후 BoardAttachmentVO 객체 생성
-                String uploadPath = UploadFiles.upload(BASE_DIR, part);
-                BoardAttachmentVO attach = BoardAttachmentVO.of(part, bno, uploadPath);
-//                BoardAttachment 테이블에 참조파일 데이터 하나 추가
-                mapper.createAttachment(attach);
-            } catch (IOException e) {
-                throw new RuntimeException(e);  // @Transactional에서 감지, 자동 rollback
-            }
-        }
-    }
-
-    // 첨부파일 한 개 얻기
-    @Override
-    public BoardAttachmentVO getAttachment(Long no) {
-        return mapper.getAttachment(no);
-    }
-
-    // 첨부파일 삭제
-    @Override
-    public boolean deleteAttachment(Long no) {
-        return mapper.deleteAttachment(no) == 1;
     }
 
     @Override
     public BoardDTO update(BoardDTO board) {
         log.info("update.........." + board);
+        BoardVO boardVO = board.toVo();
+        log.info("update...... " + boardVO);
 
 //        mapper의 update를 호출해서 행 수정
         mapper.update(board.toVo());
+
+        // 파일 업로드 처리
+        List<MultipartFile> files = board.getFiles();
+        if(files != null && !files.isEmpty()) {
+            upload(board.getNo(), files);
+        }
+
 //        바뀐 행을 가져와서 DTO로 반환
         return get(board.getNo());
     }
@@ -114,5 +111,17 @@ public class BoardServiceImpl implements BoardService{
 //        해당 no를 가지고 있는 데이터 삭제
         mapper.delete(no);
         return board;
+    }
+
+    // 첨부파일 한 개 얻기
+    @Override
+    public BoardAttachmentVO getAttachment(Long no) {
+        return mapper.getAttachment(no);
+    }
+
+    // 첨부파일 삭제
+    @Override
+    public boolean deleteAttachment(Long no) {
+        return mapper.deleteAttachment(no) == 1;
     }
 }

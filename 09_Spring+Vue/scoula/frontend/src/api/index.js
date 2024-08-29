@@ -7,9 +7,7 @@ const instance = axios.create({
     timeout: 1000,
 });
 // 요청 인터셉터
-instance.interceptors.request.use
-(
-    (config) =>  {
+instance.interceptors.request.use((config) =>  {
         // JWT 추출
         const { getToken } = useAuthStore();
         const token = getToken();
