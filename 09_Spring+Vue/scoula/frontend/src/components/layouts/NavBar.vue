@@ -21,7 +21,7 @@ const toggleNavShow = () => (state.isNavShow = !state.isNavShow);
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/">
         <i class="fa-solid fa-house"></i>
-        Yura
+        Home
       </router-link>
       <!-- @ => v-on, 이벤트를 처리해주는 디렉티브 -->
       <button

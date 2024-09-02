@@ -57,6 +57,13 @@ public class BoardController {
         return ResponseEntity.ok(service.update(board));
     }
 
+    @DeleteMapping("/{no}")
+    public ResponseEntity<BoardDTO> delete(@PathVariable Long no) {
+        service.deleteAttachment(no);
+
+        return ResponseEntity.ok(service.delete(no));
+    }
+
     @GetMapping("/download/{no}")
     public void download(@PathVariable Long no, HttpServletResponse response) throws Exception {
         BoardAttachmentVO attachment = service.getAttachment(no);
@@ -64,7 +71,6 @@ public class BoardController {
         UploadFiles.download(response, file, attachment.getFilename());
     }
 
-    //    http://localhost:8080/api/board/14
 //    기존 게시글 삭제
     @DeleteMapping("/deleteAttachment/{no}")
     public ResponseEntity<Boolean> deleteAttachment(@PathVariable Long no) throws Exception {

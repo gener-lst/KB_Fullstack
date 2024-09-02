@@ -108,6 +108,7 @@ public class BoardServiceImpl implements BoardService{
 //        delete는 삭제 전에 DTO를 저장해둬야 한다
         BoardDTO board = get(no);
 
+//        mapper.deleteAttachmentCascade(no); // -> mapper에서 delete cascade를 따로 구현
 //        해당 no를 가지고 있는 데이터 삭제
         mapper.delete(no);
         return board;

@@ -69,7 +69,7 @@
 
 <!--    해당 no 컬럼과 일치하는 행을 삭제-->
     <delete id="delete">
-        delete from tbl_board where no=#{no}
+        delete from tbl_board where no=#{no};
     </delete>
 
 <!--    tbl_board_attachment 테이블에 하나의 행을 추가한다-->
@@ -96,4 +96,9 @@
         delete from tbl_board_attachment
         where no = #{no}
     </delete>
+
+<!--    게시글 삭제시 파일 번호(no)와 일치하는 bno를 가진 첨부 파일을 삭제한다-->
+<!--    <delete id="deleteAttachmentCascade">-->
+<!--        delete from tbl_board_attachment where bno = #{no}-->
+<!--    </delete>-->
 </mapper>

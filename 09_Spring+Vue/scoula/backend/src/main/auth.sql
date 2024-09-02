@@ -62,3 +62,13 @@ FROM tbl_member m
          LEFT OUTER JOIN tbl_member_auth a
                          ON m.username = a.username
 WHERE m.username = 'admin';
+
+-- 1. 기존 외래 키 제약 조건을 제거합니다.
+ALTER TABLE tbl_board_attachment
+    DROP FOREIGN KEY tbl_board_attachment_ibfk_1;
+
+-- 2. 새로운 외래 키 제약 조건을 추가하면서 `ON DELETE CASCADE`를 적용합니다.
+ALTER TABLE tbl_board_attachment
+    ADD CONSTRAINT tbl_board_attachment_ibfk_1
+        FOREIGN KEY (bno) REFERENCES tbl_board(no)
+            ON DELETE CASCADE;

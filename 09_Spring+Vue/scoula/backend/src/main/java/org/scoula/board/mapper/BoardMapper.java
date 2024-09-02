@@ -35,4 +35,7 @@ public interface BoardMapper {
 
 //    첨부파일 번호로 해당 파일 삭제
     int deleteAttachment(Long no);
+
+//    게시글 삭제 시 첨부파일을 삭제
+//    int deleteAttachmentCascade(Long bno);
 }
