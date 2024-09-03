@@ -85,8 +85,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     // 특정 경로에 대한 보안 필터를 적용하지 않도록 설정
     @Override
     public void configure(WebSecurity web) throws Exception {
-//        해당 경로들은 보안 검사 무시
-        web.ignoring().antMatchers("/assets/**","/*","/api/member/**");
+//        해당 경로들은 보안 검사 무시(/*의 경우 첫 번째 페이지를 제외)
+        web.ignoring().antMatchers("/assets/**","/*");
     }
 
     @Override
@@ -117,6 +117,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests() // 경로별 접근 권한 설정
                 .antMatchers(HttpMethod.OPTIONS).permitAll() // 모든 OPTIONS 요청 허용
+                .antMatchers(HttpMethod.GET, "/api/member/*").authenticated() // Get요청 URL에 대해 인증 필요
+                .antMatchers(HttpMethod.PUT, "/api/member/*", "/api/member/*/changepassword").authenticated() // PUT요청 URL에 대해 인증 필요
+                .antMatchers(HttpMethod.POST, "/api/board/**").authenticated() // POST요청 URL에 대해 인증 필요
+                .antMatchers(HttpMethod.PUT, "/api/board/**").authenticated() // PUT요청 URL에 대해 인증 필요
+                .antMatchers(HttpMethod.DELETE, "/api/board/**").authenticated() // DELETE요청 URL에 대해 인증 필요
                 .anyRequest().permitAll(); // 나머지 요청들은 모든 접근 허용
 
     }

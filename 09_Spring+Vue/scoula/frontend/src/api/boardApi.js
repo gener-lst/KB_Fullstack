@@ -12,6 +12,35 @@ export default {
         return data;
     },
 
+    // async getList(params) {
+    //     try {
+    //         const { data } = await api.get(BASE_URL, { params });
+    //         console.log('BOARD GET LIST: ', data);
+    //         return {
+    //             articles: data.articles,  // 게시글 목록
+    //             totalItems: data.totalItems // 총 게시글 수
+    //         };
+    //     } catch (error) {
+    //         console.error('Error fetching list:', error);
+    //         throw error;
+    //     }
+    // },
+
+    // async getList(params) {
+    //     try {
+    //         const { data } = await api.get(BASE_URL, { params });
+    //         console.log('BOARD GET LIST: ', data);
+    //         return {
+    //             list: data.list, // 게시글 목록
+    //             totalCount: data.totalCount, // 총 게시글 수
+    //             totalPage: data.totalPage, // 총 페이지 수
+    //         };
+    //     } catch (error) {
+    //         console.error('Error fetching list:', error);
+    //         throw error;
+    //     }
+    // },
+
     async create(article) {
         const formData = new FormData();
         formData.append('title', article.title);

@@ -28,11 +28,10 @@ public class MemberController {
         return ResponseEntity.ok().body(service.checkDuplicate(username));
     }
 
-    @PostMapping("") // avatar 이미지 때문에 multipart 인코딩으로 됨
-    public ResponseEntity<MemberDTO> join(MemberJoinDTO member) {
-        return ResponseEntity.ok(service.join(member));
+    @GetMapping("/{username}")
+    public ResponseEntity<MemberDTO> get(@PathVariable String username) {
+        return ResponseEntity.ok(service.get(username));
     }
-    // 회원 가입을 처리하고 가입된 회원 정보를 ResponseEntity로 변환
 
     @GetMapping("/{username}/avatar")
     public void getAvatar(@PathVariable String username, HttpServletResponse response) {
@@ -43,6 +42,12 @@ public class MemberController {
         }
         UploadFiles.downloadImage(response, file);
     }
+
+    @PostMapping("") // avatar 이미지 때문에 multipart 인코딩으로 됨
+    public ResponseEntity<MemberDTO> join(MemberJoinDTO member) {
+        return ResponseEntity.ok(service.join(member));
+    }
+    // 회원 가입을 처리하고 가입된 회원 정보를 ResponseEntity로 변환
 
     // 회원 프로필 변경 요청을 처리하는 메소드
     @PutMapping("/{username}")
@@ -57,4 +62,9 @@ public class MemberController {
         service.changePassword(changePasswordDTO);
         return ResponseEntity.ok().build();
     }
+
+//    @DeleteMapping("/{username}")
+//    public ResponseEntity<MemberDTO> delete(@PathVariable String username) {
+//        return ResponseEntity.ok(service.delete(username));
+//    }
 }

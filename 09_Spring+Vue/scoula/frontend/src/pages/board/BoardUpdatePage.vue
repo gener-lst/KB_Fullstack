@@ -13,7 +13,7 @@ const orgArticle = ref({});
 const files = ref(null);
 
 const back = () => {
-  router.push({ name: 'board/detail', params: { no } });
+  router.push({ name: 'board/detail', params: { no }, query: cr.query});
 };
 
 const removeFile = async (no, filename) => {
@@ -88,9 +88,11 @@ load();
       <button type="submit" class="btn btn-primary me-3">
         <i class="fa-solid fa-check"></i> 확인
       </button>
+      <!-- 기존 게시글 데이터 불러오는 버튼 -->
       <button type="button" class="btn btn-primary me-3" @click="reset">
         <i class="fa-solid fa-undo"></i> 취소
       </button>
+      <!-- 상세 페이지로 돌아가는 버튼 -->
       <button class="btn btn-primary" @click="back">
         <i class="fa-solid fa-arrow-left"></i> 돌아가기
       </button>
